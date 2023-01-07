@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Baloo Bhaijaan 2', cursive;
+}
+.max-width{
+    max-width: 1483px;
+    padding: 0 80px;
+    margin: auto;
+}
+.navbar{
+    position: fixed;
+    width: 100%;
+    padding: 30px 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: all 0.3s ease;
+}
+.navbar.sticky{
+    padding: 20px 0;
+    background: maroon;
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a{
+    color: white;
+    font-size: 35px;
+    font-weight: 600;
+}
+.navbar.sticky .logo a span{
+    color: white;
+    transition: all 0.3s ease;
+}
+.navbar .logo a span{
+    color: crimson;
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+}
+.navbar .menu li a:hover{
+    color: crimson;
+}
+.navbar.sticky .menu li a:hover{
+    color: white;
+}
+.menu-btn{
+    color: whitesmoke;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+.home{
+    display: flex;
+    height: 100vh;
+    background: url(./bg_01.png) no-repeat center;
+    background-size: cover;
+    color: white;
+    min-height: 793px;
+    background-position-x: -885px;
+}
+.home .max-width{
+    margin: auto 0 auto 40px;
+}
+.home .home-content .text-1{
+    font-size: 27px;
+}
+.home .home-content .text-2{
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+.home .home-content .text-3{
+    font-size: 40px;
+    margin: 5px 0;
+}
+.home .home-content .text-3 span{
+    color: maroon;
+    font-weight: 500;
+}
+@media (max-width: 1104px) {
+    .home .max-width{
+        padding: 0 50px;
+    }
+}
+@media (max-width: 947px) {
+    .home .max-width{
+        margin-left: 0px;
+    }
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active::before{
+        content: "\f00d";
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: black;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active{
+        left: 0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    .home .home-content .text-2{
+        font-size: 70px;
+    }
+    .home .home-content .text-3{
+        font-size: 35px;
+    }
+}
+@media (max-width: 690px) {
+    .max-width{
+        padding: 0 23px;
+    }
+    .home .home-content .text-2{
+        font-size: 60px;
+    }
+    .home .home-content .text-3{
+        font-size: 32px;
+    }
+}
+@media (max-width: 690px) {
+    .home .home-content .text-2{
+        font-size: 50px;
+    }
+    .home .home-content .text-3{
+        font-size: 32px;
+    }
+}
+
+
+
+.sec2 {
+    position: relative;
+    min-height: 100vh;
+    background-color: rgb(211, 211, 211);
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-bottom: .2rem solid rgb(255, 255, 255);
+}
+
+.sec2_heading {
+    overflow: hidden;
+}
+
+.sec2_heading h2 {
+    position: relative;
+    font-size: 5rem;
+    color: #333;
+    text-transform: capitalize;
+}
+
+.sec2_heading h2:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: .2rem;
+    width: 100%;
+    background-color: rgb(241, 102, 102);
+}
+
+.sec2_container {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+
+    padding: 0 5rem;
+}
+
+.sec2_aboutme1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: .5;
+}
+
+.sec2_aboutme1Img {
+    position: relative;
+    width: 10rem;
+    overflow: hidden;
+    border: .3rem solid rgb(156, 60, 60);
+    padding: .3rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+}
+
+.sec2_aboutme1Img:hover {
+    transform: scale(1.1);
+}
+
+.sec2_aboutme1Img img {
+    width: 100%;
+    object-fit: cover;
+    background: linear-gradient(rgb(255, 121, 121), rgb(146, 33, 33));
+    border-radius: 50%;
+}
+
+.sec2_aboutme1 h2 {
+    position: relative;
+    font-size: 2rem;
+    color: #333;
+    padding-bottom: 1rem;
+
+}
+
+.sec2_aboutme1 h2:before {
+    position: absolute;
+    height: .2rem;
+    width: 60%;
+    bottom: 0;
+    right: 25%;
+    content: "";
+    background: rgb(86, 86, 86);
+}
+.social-icon{
+    margin-top: 1rem;
+}
+.social-icon i{
+    padding: 1rem;
+    font-size: 1.3rem;
+    color: rgb(0, 0, 0);
+}
+.sec2_aboutme2 {
+    position: relative;
+    flex: .5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sec2_aboutme2 p {
+    font-size: 1.5rem;
+}
+
+
+.main-skill-container{
+    padding: 5rem;
+    background-color: rgb(94, 94, 94);
+}
+.about-text-heading{
+    text-transform: uppercase;
+    margin-top: -1.8rem;
+    margin-right: 1.6rem;
+    position: relative;
+    padding: .6rem 0;
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    letter-spacing: 4px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-text-heading::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 501px;
+    height: 0.2rem;
+    width: 26%;
+    background-color: rgb(241, 102, 102);
+}
+.skill-percentage{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+    color: blanchedalmond;
+    text-transform: uppercase;
+}
+.circle{
+    width: 175%;
+    height: 127px;
+    margin: 1rem;
+    border-radius: 50%;
+    background-color: black;
+    border: 3px solid #494646;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.circle::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 50%;
+    border: 4px solid #fff200;
+    border-left-color: transparent;
+    transform: rotate(30deg);
+}
+.circle-js{
+    width: 162%;
+    height: 70%;
+}
+.circle-js::after{
+    width: 94%;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    transform: rotate(-50deg);
+}
+.percentage{
+    font-size: 1.2rem;
+}
+.lang-name{
+    font-size: 1rem;
+}
+
+.main-contact-container{
+    padding: 2rem;
+    background-color: rgb(145, 145, 145);
+}
+.about-text-heading2{
+    text-transform: uppercase;
+    margin-top: -1.8rem;
+    margin-right: 1.6rem;
+    position: relative;
+    padding: .6rem 0;
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    letter-spacing: 4px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-text-heading2::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 563px;
+    height: 0.2rem;
+    width: 23%;
+    background-color: rgb(241, 102, 102);
+}
+.social-icon1{
+    color: azure;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -1.2rem;
+}
+.icon-name{
+    font-size: 1rem;
+    padding-left: 10px;
+    text-transform: capitalize;
+}
+.icon-contact{
+    padding-left: 15px;
+}
+.email-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.input-text{
+    width: 90%;
+    padding: 1rem .5rem;
+    margin-bottom: 1rem;
+    outline: none;
+}
+.btn-send{
+    text-decoration: none;
+    background-color: rgb(193, 176, 22);
+    padding: 0.6rem 0;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-align: center;
+    width: 90%;
+}
